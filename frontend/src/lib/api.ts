@@ -4,14 +4,22 @@ function resolveApiBase(): string {
 
   if (typeof window !== "undefined") {
     const { protocol, host } = window.location;
+    if (host.includes("localhost")) {
+      return "http://localhost:8000/api/v1";
+    }
+
     if (host.endsWith(".up.railway.app")) {
       // Example: phishing-frontend.up.railway.app -> phishing.up.railway.app
       const backendHost = host.replace("-frontend.", ".");
       return `${protocol}//${backendHost}/api/v1`;
     }
+
+    if (host.endsWith(".vercel.app")) {
+      return "https://phishing.up.railway.app/api/v1";
+    }
   }
 
-  return "http://localhost:8000/api/v1";
+  return "https://phishing.up.railway.app/api/v1";
 }
 
 const API_BASE = resolveApiBase();

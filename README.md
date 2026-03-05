@@ -65,6 +65,7 @@ phishing/
 - [Backend нұсқаулығы](./backend/README.md)
 - [Frontend нұсқаулығы](./frontend/README.md)
 - [Railway deploy нұсқаулығы](./docs/DEPLOY_RAILWAY.md)
+- [Vercel deploy нұсқаулығы](./docs/DEPLOY_VERCEL.md)
 - [API Reference](./docs/API.md)
 - [Архитектура](./docs/ARCHITECTURE.md)
 - [Threat Feeds](./docs/THREAT_FEEDS.md)

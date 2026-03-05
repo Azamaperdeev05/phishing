@@ -55,11 +55,13 @@ python -m pytest -q
 - `ACCESS_TOKEN_EXPIRE_MINUTES`
 - `DATABASE_URL` (әдепкі: SQLite)
 
-`.env` үлгісі: [backend/.env.example](./.env.example)
+`.env` файлы: [backend/.env](./.env)
 
 ## Railway
 
 Railway deploy қадамдары: [docs/DEPLOY_RAILWAY.md](../docs/DEPLOY_RAILWAY.md)
+
+Frontend-ті Vercel-ге шығару нұсқаулығы: [docs/DEPLOY_VERCEL.md](../docs/DEPLOY_VERCEL.md)
 
 ## Маңызды production check-list
 

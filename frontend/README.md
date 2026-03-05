@@ -35,7 +35,7 @@ const API_BASE = "http://localhost:8000/api/v1";
 
 Егер backend басқа host/port-та тұрса, осы мәнді өзгертіңіз.
 
-`.env` үлгісі: [frontend/.env.example](./.env.example)
+`.env` файлы: [frontend/.env](./.env)
 
 ## Негізгі беттер
 
@@ -53,3 +53,13 @@ const API_BASE = "http://localhost:8000/api/v1";
 ## Railway
 
 Railway deploy қадамдары: [docs/DEPLOY_RAILWAY.md](../docs/DEPLOY_RAILWAY.md)
+
+## Vercel (ұсынылған)
+
+Backend Railway + Frontend Vercel үшін:
+
+1. Vercel Project root: `frontend`
+2. Env variable:
+   - `NEXT_PUBLIC_API_BASE_URL=https://phishing.up.railway.app/api/v1`
+
+Толық нұсқаулық: [docs/DEPLOY_VERCEL.md](../docs/DEPLOY_VERCEL.md)
