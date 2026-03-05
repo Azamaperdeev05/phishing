@@ -1,0 +1,19 @@
+{
+    "python.defaultInterpreterPath": "python",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/backend"
+    ],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": true
+    },
+    "typescript.tsdk": "frontend/node_modules/typescript/lib",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.next": true,
+        "**/node_modules": true,
+        "backend/phishguard.db-journal": true
+    }
+}

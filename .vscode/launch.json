@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Backend: PhishGuard (FastAPI)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app",
+                "--reload",
+                "--port",
+                "8000"
+            ],
+            "cwd": "${workspaceFolder}/backend",
+            "jinja": true,
+            "presentation": {
+                "group": "backend",
+                "order": 1
+            }
+        },
+        {
+            "name": "Frontend: PhishGuard (Next.js)",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}/frontend",
+            "presentation": {
+                "group": "frontend",
+                "order": 2
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Full Stack: PhishGuard",
+            "configurations": [
+                "Backend: PhishGuard (FastAPI)",
+                "Frontend: PhishGuard (Next.js)"
+            ],
+            "stopAll": true
+        }
+    ]
+}

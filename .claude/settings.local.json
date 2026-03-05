@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install python-docx)",
+      "Bash(python -c \":*)",
+      "Bash(npx create-next-app@latest frontend --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm --turbopack)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
