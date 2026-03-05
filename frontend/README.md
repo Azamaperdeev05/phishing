@@ -35,6 +35,8 @@ const API_BASE = "http://localhost:8000/api/v1";
 
 Егер backend басқа host/port-та тұрса, осы мәнді өзгертіңіз.
 
+`.env` үлгісі: [frontend/.env.example](./.env.example)
+
 ## Негізгі беттер
 
 - `/` — сканерлеу беті
@@ -48,3 +50,6 @@ const API_BASE = "http://localhost:8000/api/v1";
 - Жеңіл шекаралар, жұмсақ көлеңке, таза типографика
 - Mobile + desktop responsive
 
+## Railway
+
+Railway deploy қадамдары: [docs/DEPLOY_RAILWAY.md](../docs/DEPLOY_RAILWAY.md)

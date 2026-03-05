@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-DATABASE_URL = f"sqlite:///{BASE_DIR / 'phishguard_v2.db'}"
+DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{BASE_DIR / 'phishguard_v2.db'}")
 
 # Google Safe Browsing API key (optional)
 GOOGLE_SAFE_BROWSING_API_KEY = os.getenv("GOOGLE_SAFE_BROWSING_API_KEY", "")
@@ -10,13 +10,12 @@ GOOGLE_SAFE_BROWSING_API_KEY = os.getenv("GOOGLE_SAFE_BROWSING_API_KEY", "")
 # Request timeout for fetching sites
 REQUEST_TIMEOUT = 10
 
-# CORS origins
-CORS_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://192.168.8.3:3000",  # Network IP from terminal
-    "*",  # Allow all for dev
-]
+# CORS origins (comma-separated in env)
+raw_cors = os.getenv(
+    "PHISHGUARD_CORS_ORIGINS",
+    "http://localhost:3000,http://127.0.0.1:3000",
+)
+CORS_ORIGINS = [origin.strip() for origin in raw_cors.split(",") if origin.strip()]
 
 # Auth settings
 SECRET_KEY = os.getenv(

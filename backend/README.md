@@ -55,10 +55,15 @@ python -m pytest -q
 - `ACCESS_TOKEN_EXPIRE_MINUTES`
 - `DATABASE_URL` (әдепкі: SQLite)
 
+`.env` үлгісі: [backend/.env.example](./.env.example)
+
+## Railway
+
+Railway deploy қадамдары: [docs/DEPLOY_RAILWAY.md](../docs/DEPLOY_RAILWAY.md)
+
 ## Маңызды production check-list
 
 - `PHISHGUARD_SECRET_KEY` міндетті түрде қауіпсіз мәнге ауыстыру
 - CORS origins-ті нақты домендермен шектеу
 - Feed update cron/scheduler орнату
 - HTTPS және reverse proxy арқылы жариялау
-
