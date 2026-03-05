@@ -1,6 +1,20 @@
-const API_BASE = (
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000/api/v1"
-).replace(/\/+$/, "");
+function resolveApiBase(): string {
+  const envApiBase = process.env.NEXT_PUBLIC_API_BASE_URL;
+  if (envApiBase) return envApiBase.replace(/\/+$/, "");
+
+  if (typeof window !== "undefined") {
+    const { protocol, host } = window.location;
+    if (host.endsWith(".up.railway.app")) {
+      // Example: phishing-frontend.up.railway.app -> phishing.up.railway.app
+      const backendHost = host.replace("-frontend.", ".");
+      return `${protocol}//${backendHost}/api/v1`;
+    }
+  }
+
+  return "http://localhost:8000/api/v1";
+}
+
+const API_BASE = resolveApiBase();
 
 const getHeaders = () => {
   const headers: Record<string, string> = { "Content-Type": "application/json" };

@@ -16,6 +16,7 @@ raw_cors = os.getenv(
     "http://localhost:3000,http://127.0.0.1:3000",
 )
 CORS_ORIGINS = [origin.strip() for origin in raw_cors.split(",") if origin.strip()]
+CORS_ORIGIN_REGEX = os.getenv("PHISHGUARD_CORS_ORIGIN_REGEX", r"https://.*\.up\.railway\.app")
 
 # Auth settings
 SECRET_KEY = os.getenv(
