@@ -15,7 +15,6 @@ export interface FactorScores {
   whois_check: number;
   content_analysis: number;
   text_analysis: number;
-  ml_analysis: number;
   blacklist_check: number;
 }
 

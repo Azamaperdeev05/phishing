@@ -2,13 +2,12 @@ from schemas import FactorScores
 
 # Weights for each analysis factor (must sum to 1.0)
 WEIGHTS = {
-    "url_analysis": 0.20,
-    "ssl_check": 0.15,
-    "whois_check": 0.10,
-    "content_analysis": 0.15,
-    "text_analysis": 0.10,
-    "ml_analysis": 0.15,
-    "blacklist_check": 0.15,
+    "url_analysis": 0.24,
+    "ssl_check": 0.18,
+    "whois_check": 0.12,
+    "content_analysis": 0.18,
+    "text_analysis": 0.12,
+    "blacklist_check": 0.16,
 }
 
 # Verdict thresholds

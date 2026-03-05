@@ -58,7 +58,7 @@ export default function Home() {
             </h2>
             <p className="text-lg text-[var(--color-muted)]">
               URL мекенжайын енгізіп, сайттың қауіпсіздігін жан-жақты тексеріңіз.
-              Жүйе URL, SSL, мазмұн, ML-модельдер және базаларды талдайды.
+              Жүйе URL, SSL, мазмұн, мәтін және blacklist базаларын талдайды.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function Home() {
                   Сайт тексерілуде...
                 </p>
                 <p className="text-sm text-[var(--color-muted)] mt-1">
-                  URL, SSL, мазмұн, ML және қауіпті базалар талданып жатыр
+                  URL, SSL, мазмұн, мәтін және қауіпті базалар талданып жатыр
                 </p>
               </div>
             </div>

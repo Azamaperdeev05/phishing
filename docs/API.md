@@ -75,7 +75,6 @@ Response `200`:
     "whois_check": 60,
     "content_analysis": 50,
     "text_analysis": 40,
-    "ml_analysis": 90,
     "blacklist_check": 100
   },
   "warnings": ["..."],
@@ -114,4 +113,3 @@ Response `200`:
   "detail": "..."
 }
 ```
-

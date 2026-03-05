@@ -22,7 +22,6 @@ Backend (FastAPI)
    - `whois_analyzer`
    - `content_analyzer`
    - `text_analyzer`
-   - `ml_analyzer`
    - `blacklist_analyzer`
 4. Factor score aggregation
 5. Final verdict/recommendation есептеу
@@ -40,4 +39,3 @@ ORM: SQLAlchemy, DB: SQLite.
 - Локал dataset: `phishing_test_dataset.json`
 - Сыртқы фидтерден генерацияланатын файл: `backend/data/threat_feed_domains.json`
 - Feed update скрипті: `backend/scripts/update_threat_feeds.py`
-

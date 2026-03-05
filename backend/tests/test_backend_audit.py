@@ -92,7 +92,6 @@ def test_scan_whitelisted_domain_skips_analyzers(client, monkeypatch):
     monkeypatch.setattr(scan_router, "analyze_whois", fail_if_called)
     monkeypatch.setattr(scan_router, "analyze_content", fail_if_called)
     monkeypatch.setattr(scan_router, "analyze_text", fail_if_called)
-    monkeypatch.setattr(scan_router, "analyze_ml", fail_if_called)
     monkeypatch.setattr(scan_router, "analyze_blacklist", fail_if_called)
 
     response = client.post(
@@ -142,11 +141,6 @@ def test_scan_aggregates_factor_scores(client, monkeypatch):
     )
     monkeypatch.setattr(
         scan_router,
-        "analyze_ml",
-        lambda _url: {"score": 90, "warnings": ["ml-warning"], "features": {}},
-    )
-    monkeypatch.setattr(
-        scan_router,
         "analyze_blacklist",
         lambda _url: {"score": 100, "warnings": ["blacklist-warning"], "details": {}},
     )
@@ -158,12 +152,12 @@ def test_scan_aggregates_factor_scores(client, monkeypatch):
     assert response.status_code == 200
     body = response.json()
 
-    assert body["score"] == 72.5
+    assert body["score"] == 68.8
     assert body["verdict"] == "SUSPICIOUS"
     assert body["risk_level"] == "MEDIUM"
     assert body["factors"]["url_analysis"] == 80
     assert body["factors"]["ssl_check"] == 70
-    assert len(body["warnings"]) == 7
+    assert len(body["warnings"]) == 6
 
 def test_scan_rejects_invalid_url(client):
     response = client.post(

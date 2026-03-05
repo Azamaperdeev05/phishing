@@ -20,7 +20,6 @@ from analyzers.ssl_analyzer import analyze_ssl
 from analyzers.whois_analyzer import analyze_whois
 from analyzers.content_analyzer import analyze_content
 from analyzers.text_analyzer import analyze_text
-from analyzers.ml_analyzer import analyze_ml
 from analyzers.blacklist_analyzer import analyze_blacklist
 
 router = APIRouter()
@@ -52,7 +51,6 @@ def scan_url(
             whois_check=100,
             content_analysis=100,
             text_analysis=100,
-            ml_analysis=100,
             blacklist_check=100,
         )
         result = ScanResponse(
@@ -89,7 +87,6 @@ def scan_url(
     whois_result = analyze_whois(url)
     content_result = analyze_content(url)
     text_result = analyze_text(url)
-    ml_result = analyze_ml(url)
     blacklist_result = analyze_blacklist(url)
 
     # Aggregate factor scores
@@ -99,7 +96,6 @@ def scan_url(
         "whois_check": whois_result["score"],
         "content_analysis": content_result["score"],
         "text_analysis": text_result["score"],
-        "ml_analysis": ml_result["score"],
         "blacklist_check": blacklist_result["score"],
     }
 
@@ -116,7 +112,6 @@ def scan_url(
         + whois_result["warnings"]
         + content_result["warnings"]
         + text_result["warnings"]
-        + ml_result["warnings"]
         + blacklist_result["warnings"]
     )
 

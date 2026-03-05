@@ -15,7 +15,6 @@ class FactorScores(BaseModel):
     whois_check: float = 0
     content_analysis: float = 0
     text_analysis: float = 0
-    ml_analysis: float = 0
     blacklist_check: float = 0
 
 

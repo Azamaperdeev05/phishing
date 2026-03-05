@@ -15,7 +15,6 @@ const FACTOR_LABELS: Record<string, string> = {
   whois_check: "WHOIS / Домен жасы",
   content_analysis: "Мазмұн талдау",
   text_analysis: "Мәтін талдау",
-  ml_analysis: "ML / Жасанды интеллект",
   blacklist_check: "База бойынша тексеру",
 };
 

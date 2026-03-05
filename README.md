@@ -1,7 +1,7 @@
 # PhishGuard
 
 PhishGuard — фишинг сайттарды анықтауға арналған full-stack жоба.  
-Жоба URL құрылымы, SSL, WHOIS, HTML/JS контент, мәтіндік паттерндер, ML-эвристика және threat-intel blacklist арқылы талдау жасайды.
+Жоба URL құрылымы, SSL, WHOIS, HTML/JS контент, мәтіндік паттерндер және threat-intel blacklist арқылы талдау жасайды.
 
 Жылдам навигация: [START-HERE.md](./START-HERE.md)
 
