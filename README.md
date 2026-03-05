@@ -3,6 +3,8 @@
 PhishGuard — фишинг сайттарды анықтауға арналған full-stack жоба.  
 Жоба URL құрылымы, SSL, WHOIS, HTML/JS контент, мәтіндік паттерндер, ML-эвристика және threat-intel blacklist арқылы талдау жасайды.
 
+Жылдам навигация: [START-HERE.md](./START-HERE.md)
+
 ## Негізгі мүмкіндіктер
 
 - URL сканерлеу: `SAFE / SUSPICIOUS / PHISHING`
@@ -73,4 +75,3 @@ phishing/
 
 - `PHISHGUARD_SECRET_KEY` production ортада міндетті түрде өзгертілуі керек.
 - Threat feeds автоматты түрде жаңару үшін `backend/scripts/update_threat_feeds.py` периодты түрде іске қосылсын.
-
